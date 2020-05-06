@@ -1,0 +1,14 @@
+@import "config";
+
+.btn {
+  padding: 10px 30px;
+  background: $secondary-color;
+  color: $tan-color;
+  border: 1px $secondary-color solid;
+  border-radius: 25px;
+  opacity: 0.7;
+
+  &:hover {
+    transform: scale(0.98);
+  }
+}
