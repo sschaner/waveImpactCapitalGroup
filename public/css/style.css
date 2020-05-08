@@ -5,6 +5,10 @@
   margin: 0;
   padding: 0; }
 
+body {
+  font-family: "Roboto Slab", serif;
+  color: #233d89; }
+
 ul {
   list-style: none; }
 
@@ -13,6 +17,17 @@ a {
 
 img {
   max-width: 100%; }
+
+.section-title {
+  color: #233d89;
+  text-transform: uppercase;
+  text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  max-width: 80%;
+  margin: auto;
+  padding: 2em 0; }
+  .section-title .new-line {
+    display: block; }
 
 /* Utilities */
 .container {
@@ -71,14 +86,15 @@ SHOWCASE SECTION
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-transform: uppercase;
+  text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
   text-align: center;
   padding: 0 20px;
   color: var(--tan-color); }
   .showcase__content {
     z-index: 1; }
     .showcase__content--title {
-      color: #f8f1c9;
-      text-transform: uppercase; }
+      color: #f8f1c9; }
       .showcase__content--title-large {
         font-size: 4em; }
     .showcase__content--subtitle {
@@ -101,7 +117,7 @@ SHOWCASE SECTION
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0, 0, 0, 0.6); }
+      background: rgba(0, 0, 0, 0.3); }
   .showcase__video {
     min-width: 100%;
     min-height: 100%;
@@ -110,6 +126,33 @@ SHOWCASE SECTION
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); }
+
+/*********************************** 
+MORE SECTION
+***********************************/
+.more {
+  height: 100vh;
+  background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url(../img/mobile-beach-trail.jpg);
+  background-size: cover; }
+  @media only screen and (min-width: 640px) {
+    .more {
+      background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url(../img/mobile-large-beach-trail.jpg); } }
+  @media only screen and (min-width: 768px) {
+    .more {
+      background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url(../img/beach-trail.jpg); } }
+  @media only screen and (min-width: 960px) {
+    .more {
+      background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url(../img/deskop-beach-trail.jpg); } }
+  @media only screen and (min-width: 1400px) {
+    .more {
+      background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url(../img/desktop-large-beach-trail.jpg); } }
+
+.row {
+  display: grid;
+  grid-gap: 2em; }
+  @media only screen and (min-width: 640px) {
+    .row {
+      grid-template-columns: repeat(2, 1fr); } }
 
 .btn {
   padding: 10px 30px;
