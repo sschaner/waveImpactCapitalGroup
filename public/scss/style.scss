@@ -25,11 +25,10 @@ img {
 
 .section-title {
   color: $primary-color;
-  text-transform: uppercase;
-  text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
-  text-align: center;
-  max-width: 500px;
+  @include set-font-style-titles;
+  max-width: 80%;
   margin: auto;
+  padding: 2em 0;
 
   .new-line {
     display: block;
@@ -111,7 +110,7 @@ SHOWCASE SECTION
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: center;
+  @include set-font-style-titles;
   padding: 0 20px;
   color: var(--tan-color);
 
@@ -120,7 +119,6 @@ SHOWCASE SECTION
 
     &--title {
       color: $tan-color;
-      text-transform: uppercase;
 
       &-large {
         font-size: 4em;
@@ -153,7 +151,7 @@ SHOWCASE SECTION
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0, 0, 0, 0.6);
+      background: rgba(0, 0, 0, 0.3);
     }
   }
 
@@ -169,33 +167,51 @@ SHOWCASE SECTION
 }
 
 /*********************************** 
-TEAM SECTION
+MORE SECTION
 ***********************************/
-.team-container {
-  display: grid;
-  grid-gap: 2px;
-  @media only screen and (min-width: $tablet) {
-    grid-template-columns: repeat(2, 1fr);
+.more {
+  height: 100vh;
+  background: linear-gradient(
+      rgba(256, 256, 256, 0.4),
+      rgba(256, 256, 256, 0.4)
+    ),
+    url(../img/mobile-beach-trail.jpg);
+  @media only screen and (min-width: $mobile-large) {
+    background: linear-gradient(
+        rgba(256, 256, 256, 0.4),
+        rgba(256, 256, 256, 0.4)
+      ),
+      url(../img/mobile-large-beach-trail.jpg);
   }
+  @media only screen and (min-width: $tablet) {
+    background: linear-gradient(
+        rgba(256, 256, 256, 0.4),
+        rgba(256, 256, 256, 0.4)
+      ),
+      url(../img/beach-trail.jpg);
+  }
+  @media only screen and (min-width: $desktop) {
+    background: linear-gradient(
+        rgba(256, 256, 256, 0.4),
+        rgba(256, 256, 256, 0.4)
+      ),
+      url(../img/deskop-beach-trail.jpg);
+  }
+  @media only screen and (min-width: $desktop-large) {
+    background: linear-gradient(
+        rgba(256, 256, 256, 0.4),
+        rgba(256, 256, 256, 0.4)
+      ),
+      url(../img/desktop-large-beach-trail.jpg);
+  }
+  background-size: cover;
 }
 
-.team-card {
+.row {
   display: grid;
-  grid-template-areas:
-    "team-img team-content team-content"
-    "team-img team-content team-content";
-  border: 1px solid $primary-color;
-
-  img {
-    grid-area: team-img;
-  }
-
-  .content {
-    grid-area: team-content;
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: center;
+  grid-gap: 2em;
+  @media only screen and (min-width: $mobile-large) {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 

@@ -6,9 +6,17 @@ $secondaryfont-weight: 600;
 $primary-color: #233d89;
 $secondary-color: #6d9eeb;
 $tan-color: #f8f1c9;
-$desktop: 960px;
-$tablet: 768px;
-$mobile-large: 640px;
-$mobile: 480px;
 $mobile-small: 300px;
+$mobile: 480px;
+$mobile-large: 640px;
+$tablet: 768px;
+$desktop: 960px;
+$desktop-large: 1400px;
 $max-width: 1100px;
+
+// Set uppercase and text-shadow
+@mixin set-font-style-titles {
+  text-transform: uppercase;
+  text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
+  text-align: center;
+}
