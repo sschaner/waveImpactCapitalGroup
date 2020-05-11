@@ -9,6 +9,7 @@
 body {
   font-family: $font-stack;
   color: $primary-color;
+  background: $tan-color;
 }
 
 ul {
@@ -170,7 +171,7 @@ SHOWCASE SECTION
 MORE SECTION
 ***********************************/
 .more {
-  height: 100vh;
+  padding-bottom: 3rem;
   background: linear-gradient(
       rgba(256, 256, 256, 0.4),
       rgba(256, 256, 256, 0.4)
@@ -214,5 +215,43 @@ MORE SECTION
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+/*********************************** 
+HOW SECTION
+***********************************/
+.how {
+  &__content-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+    @media only screen and (min-width: $mobile-large) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media only screen and (min-width: $desktop) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  &__content {
+    text-align: center;
+
+    p {
+      line-height: 1.6;
+    }
+  }
+
+  &__content-title {
+    text-transform: uppercase;
+    margin: 1rem 0;
+  }
+
+  &__content-icon {
+    color: $secondary-color;
+  }
+}
+
+/*********************************** 
+VIDEOS SECTION
+***********************************/
 
 @import "buttons";
