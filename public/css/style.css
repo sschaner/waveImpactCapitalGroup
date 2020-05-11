@@ -7,7 +7,8 @@
 
 body {
   font-family: "Roboto Slab", serif;
-  color: #233d89; }
+  color: #233d89;
+  background: #f8f1c9; }
 
 ul {
   list-style: none; }
@@ -131,7 +132,7 @@ SHOWCASE SECTION
 MORE SECTION
 ***********************************/
 .more {
-  height: 100vh;
+  padding-bottom: 3rem;
   background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url(../img/mobile-beach-trail.jpg);
   background-size: cover; }
   @media only screen and (min-width: 640px) {
@@ -154,6 +155,32 @@ MORE SECTION
     .row {
       grid-template-columns: repeat(2, 1fr); } }
 
+/*********************************** 
+HOW SECTION
+***********************************/
+.how__content-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1rem; }
+  @media only screen and (min-width: 640px) {
+    .how__content-container {
+      grid-template-columns: repeat(2, 1fr); } }
+  @media only screen and (min-width: 960px) {
+    .how__content-container {
+      grid-template-columns: repeat(4, 1fr); } }
+.how__content {
+  text-align: center; }
+  .how__content p {
+    line-height: 1.6; }
+.how__content-title {
+  text-transform: uppercase;
+  margin: 1rem 0; }
+.how__content-icon {
+  color: #6d9eeb; }
+
+/*********************************** 
+VIDEOS SECTION
+***********************************/
 .btn {
   padding: 10px 30px;
   background: #6d9eeb;
