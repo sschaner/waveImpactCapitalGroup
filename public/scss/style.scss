@@ -220,6 +220,11 @@ MORE SECTION
 HOW SECTION
 ***********************************/
 .how {
+  .fade-in {
+    opacity: 0;
+    transition: opacity 250ms ease-in;
+  }
+
   &__content-container {
     display: grid;
     grid-template-columns: 1fr;
@@ -234,6 +239,7 @@ HOW SECTION
 
   &__content {
     text-align: center;
+    opacity: 0;
 
     p {
       line-height: 1.6;
