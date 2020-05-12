@@ -158,6 +158,9 @@ MORE SECTION
 /*********************************** 
 HOW SECTION
 ***********************************/
+.how .fade-in {
+  opacity: 0;
+  transition: opacity 250ms ease-in; }
 .how__content-container {
   display: grid;
   grid-template-columns: 1fr;
@@ -169,7 +172,8 @@ HOW SECTION
     .how__content-container {
       grid-template-columns: repeat(4, 1fr); } }
 .how__content {
-  text-align: center; }
+  text-align: center;
+  opacity: 0; }
   .how__content p {
     line-height: 1.6; }
 .how__content-title {
