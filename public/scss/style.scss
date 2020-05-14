@@ -24,6 +24,14 @@ img {
   max-width: 100%;
 }
 
+/* Utilities */
+.container {
+  max-width: $max-width;
+  margin: auto;
+  padding: 0 2rem;
+  overflow: hidden;
+}
+
 .section-top {
   margin-top: 4rem;
 }
@@ -40,12 +48,19 @@ img {
   }
 }
 
-/* Utilities */
-.container {
-  max-width: $max-width;
-  margin: auto;
-  padding: 0 2rem;
-  overflow: hidden;
+.card {
+  display: block;
+  grid-gap: 0.5rem;
+  margin-bottom: 2rem;
+
+  &__content {
+    padding: 1rem;
+
+    &--title {
+      margin-bottom: 0.25em;
+      color: $secondary-color;
+    }
+  }
 }
 
 /*********************************** 
@@ -235,14 +250,13 @@ HOW SECTION
     grid-template-columns: 1fr;
     grid-gap: 1rem;
     @media only screen and (min-width: $mobile-large) {
-      grid-template-columns: repeat(2, 1fr);
-    }
-    @media only screen and (min-width: $desktop) {
       grid-template-columns: repeat(4, 1fr);
     }
   }
 
   &__content {
+    display: grid;
+    grid-template-rows: 0.75fr 1fr 2fr;
     text-align: center;
     opacity: 0;
 
@@ -253,10 +267,10 @@ HOW SECTION
 
   &__content-title {
     text-transform: uppercase;
-    margin: 1rem 0;
   }
 
   &__content-icon {
+    padding-bottom: 1rem;
     color: $secondary-color;
   }
 }
@@ -287,13 +301,10 @@ VIDEOS SECTION
   }
 
   .card {
-    display: block;
     @media only screen and (min-width: $mobile-large) {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
     }
-    grid-gap: 2rem;
-    margin-bottom: 2rem;
 
     &:nth-child(even) {
       .card__video {
@@ -306,13 +317,54 @@ VIDEOS SECTION
       height: 200px;
       border: 8px solid $primary-color;
     }
+  }
+}
+
+/*********************************** 
+TEAM SECTION
+***********************************/
+.team__container {
+  @media only screen and (min-width: $mobile-large) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card {
+    @media only screen and (min-width: $mobile-large) {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+    }
+
+    &__img {
+      display: block;
+      margin: 0 auto;
+      @media only screen and (min-width: $mobile-large) {
+        align-self: center;
+      }
+      border-radius: 10px;
+    }
 
     &__content {
-      padding: 1rem;
-
       &--title {
-        margin-bottom: 0.25em;
-        color: $secondary-color;
+        margin-bottom: 0;
+      }
+
+      &--subtitle {
+        position: relative;
+      }
+
+      &--subtitle::after {
+        content: "";
+        position: absolute;
+        top: 25px;
+        left: 0px;
+        width: 100px;
+        height: 2px;
+        background-color: $secondary-color;
+      }
+
+      &--description {
+        margin-top: 1em;
       }
     }
   }
