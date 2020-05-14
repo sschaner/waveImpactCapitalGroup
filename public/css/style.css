@@ -19,6 +19,16 @@ a {
 img {
   max-width: 100%; }
 
+/* Utilities */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 2rem;
+  overflow: hidden; }
+
+.section-top {
+  margin-top: 4rem; }
+
 .section-title {
   color: #233d89;
   text-transform: uppercase;
@@ -30,12 +40,15 @@ img {
   .section-title .new-line {
     display: block; }
 
-/* Utilities */
-.container {
-  max-width: 1100px;
-  margin: auto;
-  padding: 0 2rem;
-  overflow: hidden; }
+.card {
+  display: block;
+  grid-gap: 0.5rem;
+  margin-bottom: 2rem; }
+  .card__content {
+    padding: 1rem; }
+    .card__content--title {
+      margin-bottom: 0.25em;
+      color: #6d9eeb; }
 
 /*********************************** 
 NAV
@@ -54,6 +67,7 @@ NAV
       top: 0;
       height: 2.5em; } }
   .nav__logo-link {
+    display: flex;
     width: 30px; }
   .nav .nav__list {
     display: flex;
@@ -102,8 +116,7 @@ SHOWCASE SECTION
       color: #6d9eeb; }
     .showcase__content--btn {
       display: inline-block;
-      margin-top: 2em;
-      text-transform: uppercase; }
+      margin-top: 2em; }
   .showcase__video-container {
     position: absolute;
     top: 0;
@@ -132,6 +145,7 @@ SHOWCASE SECTION
 MORE SECTION
 ***********************************/
 .more {
+  height: 700px;
   padding-bottom: 3rem;
   background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url(../img/mobile-beach-trail.jpg);
   background-size: cover; }
@@ -167,31 +181,88 @@ HOW SECTION
   grid-gap: 1rem; }
   @media only screen and (min-width: 640px) {
     .how__content-container {
-      grid-template-columns: repeat(2, 1fr); } }
-  @media only screen and (min-width: 960px) {
-    .how__content-container {
       grid-template-columns: repeat(4, 1fr); } }
 .how__content {
+  display: grid;
+  grid-template-rows: 0.75fr 1fr 2fr;
   text-align: center;
   opacity: 0; }
   .how__content p {
     line-height: 1.6; }
 .how__content-title {
-  text-transform: uppercase;
-  margin: 1rem 0; }
+  text-transform: uppercase; }
 .how__content-icon {
+  padding-bottom: 1rem;
   color: #6d9eeb; }
 
 /*********************************** 
 VIDEOS SECTION
 ***********************************/
+.videos__container {
+  max-width: 800px; }
+  .videos__container .slide-right {
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: all 1s ease-in; }
+  .videos__container .slide-left {
+    transform: translateX(50%);
+    opacity: 0;
+    transition: all 1s ease-in; }
+  .videos__container .slide-in {
+    transform: translateX(0%);
+    opacity: 1; }
+@media only screen and (min-width: 640px) {
+  .videos .card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); } }
+.videos .card:nth-child(even) .card__video {
+  order: 2; }
+.videos .card__video {
+  width: 100%;
+  height: 200px;
+  border: 8px solid #233d89; }
+
+/*********************************** 
+TEAM SECTION
+***********************************/
+@media only screen and (min-width: 640px) {
+  .team__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); } }
+@media only screen and (min-width: 640px) {
+  .team__container .card {
+    display: grid;
+    grid-template-columns: 1fr 2fr; } }
+.team__container .card__img {
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px; }
+  @media only screen and (min-width: 640px) {
+    .team__container .card__img {
+      align-self: center; } }
+.team__container .card__content--title {
+  margin-bottom: 0; }
+.team__container .card__content--subtitle {
+  position: relative; }
+.team__container .card__content--subtitle::after {
+  content: "";
+  position: absolute;
+  top: 25px;
+  left: 0px;
+  width: 100px;
+  height: 2px;
+  background-color: #6d9eeb; }
+.team__container .card__content--description {
+  margin-top: 1em; }
+
 .btn {
   padding: 10px 30px;
   background: #6d9eeb;
   color: #f8f1c9;
   border: 1px #6d9eeb solid;
   border-radius: 25px;
-  opacity: 0.7; }
+  opacity: 0.7;
+  text-transform: uppercase; }
   .btn:hover {
     transform: scale(0.98); }
 
