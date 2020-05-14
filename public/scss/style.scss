@@ -27,7 +27,7 @@ img {
 /* Utilities */
 .container {
   max-width: $max-width;
-  margin: auto;
+  margin: 0 auto;
   padding: 0 2rem;
   overflow: hidden;
 }
@@ -229,10 +229,13 @@ MORE SECTION
 }
 
 .row {
-  display: grid;
-  grid-gap: 2em;
   @media only screen and (min-width: $mobile-large) {
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    justify-content: space-around;
+
+    .col {
+      width: 40%;
+    }
   }
 }
 
