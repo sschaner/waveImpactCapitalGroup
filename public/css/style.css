@@ -14,7 +14,8 @@ ul {
   list-style: none; }
 
 a {
-  text-decoration: none; }
+  text-decoration: none;
+  color: #233d89; }
 
 img {
   max-width: 100%; }
@@ -40,15 +41,57 @@ img {
   .section-title .new-line {
     display: block; }
 
+.secondary-title {
+  margin-bottom: 0.25em;
+  color: #6d9eeb; }
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 250ms ease-in; }
+
 .card {
   display: block;
   grid-gap: 0.5rem;
   margin-bottom: 2rem; }
   .card__content {
     padding: 1rem; }
-    .card__content--title {
-      margin-bottom: 0.25em;
-      color: #6d9eeb; }
+
+.input-group {
+  position: relative; }
+  .input-group + .input-group {
+    margin-top: 1.5em; }
+  .input-group__styles {
+    display: block;
+    margin: 0;
+    padding: 0 1em;
+    background-color: #f3fafd;
+    border: 2px solid #6d9eeb;
+    border-radius: 4px;
+    -webkit-appearance: none;
+    height: 2em;
+    color: #6d9eeb;
+    font-size: 1em;
+    font-family: inherit;
+    transition: box-shadow 0.2s linear, border-color 0.25s ease-out; }
+    .input-group__styles:-webkit-autofill {
+      -webkit-text-fill-color: #6d9eeb; }
+    .input-group__styles:focus {
+      outline: none;
+      box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+      border: 2px solid #233d89; }
+      .input-group__styles:focus + span {
+        transform: translateY(-100%);
+        opacity: 1; }
+    .input-group__styles:valid + span {
+      transform: translateY(-100%); }
+  .input-group__placeholder {
+    position: absolute;
+    top: 0;
+    left: 1.1em;
+    color: #6d9eeb;
+    transform: translateY(25%);
+    opacity: 0.5;
+    transition: 0.2s linear; }
 
 /*********************************** 
 NAV
@@ -144,22 +187,27 @@ SHOWCASE SECTION
 /*********************************** 
 MORE SECTION
 ***********************************/
-.more {
+.more,
+.contact {
   height: 700px;
   padding-bottom: 3rem;
   background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url(../img/mobile-beach-trail.jpg);
   background-size: cover; }
   @media only screen and (min-width: 640px) {
-    .more {
+    .more,
+    .contact {
       background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url(../img/mobile-large-beach-trail.jpg); } }
   @media only screen and (min-width: 768px) {
-    .more {
+    .more,
+    .contact {
       background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url(../img/beach-trail.jpg); } }
   @media only screen and (min-width: 960px) {
-    .more {
+    .more,
+    .contact {
       background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url(../img/deskop-beach-trail.jpg); } }
   @media only screen and (min-width: 1400px) {
-    .more {
+    .more,
+    .contact {
       background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url(../img/desktop-large-beach-trail.jpg); } }
 
 @media only screen and (min-width: 640px) {
@@ -172,9 +220,6 @@ MORE SECTION
 /*********************************** 
 HOW SECTION
 ***********************************/
-.how .fade-in {
-  opacity: 0;
-  transition: opacity 250ms ease-in; }
 .how__content-container {
   display: grid;
   grid-template-columns: 1fr;
@@ -255,6 +300,46 @@ TEAM SECTION
 .team__container .card__content--description {
   margin-top: 1em; }
 
+/*********************************** 
+CONTACT SECTION
+***********************************/
+.contact .container {
+  max-width: 800px;
+  display: flex;
+  flex-direction: column; }
+.contact__primary {
+  align-self: center; }
+.contact__btn {
+  margin: 1rem 0;
+  width: fit-content;
+  align-self: center; }
+.contact__secondary {
+  text-align: center; }
+  .contact__secondary--icons .icon-background {
+    color: #6d9eeb; }
+
+/*********************************** 
+CONTACT PAGE
+***********************************/
+.container-contact {
+  text-align: center; }
+  .container-contact .contact-video {
+    display: block;
+    margin: 3em auto 2em; }
+  .container-contact .contact-btn {
+    display: inline-block;
+    margin: 0 auto; }
+  .container-contact .joining-btn {
+    margin-bottom: 2em; }
+  .container-contact .contact-form {
+    background-color: #fff;
+    padding: 2.25em;
+    border: 1px solid #ddd;
+    border-radius: 0.5em;
+    display: none; }
+  .container-contact .display-block {
+    display: block; }
+
 .btn {
   padding: 10px 30px;
   background: #6d9eeb;
@@ -264,6 +349,7 @@ TEAM SECTION
   opacity: 0.7;
   text-transform: uppercase; }
   .btn:hover {
-    transform: scale(0.98); }
+    transform: scale(0.98);
+    cursor: pointer; }
 
 /*# sourceMappingURL=style.css.map */

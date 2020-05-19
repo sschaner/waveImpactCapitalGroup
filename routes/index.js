@@ -8,4 +8,9 @@ router.get("/", (req, res) => {
   res.render("landing");
 });
 
+// Contact Form Route
+router.get("/contact", (req, res) => {
+  res.render("contact", { page: "contact" });
+});
+
 module.exports = router;

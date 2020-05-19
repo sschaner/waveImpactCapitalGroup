@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/6bef260f62.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>Wave Impact Capital Group</title>
+  </head>
+  <body>
+    <div class="container container-contact">
+      <iframe
+        class="contact-video"
+        src="https://www.youtube.com/embed/R5atnGc8p3s"
+        frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+      <button class="btn contact-btn joining-btn">
+        interested in joining?
+      </button>
+      <form method="POST" action="send" class="contact-form">
+        <div class="contact-form-questions">
+          <div class="contact-form__personal-info">
+            <div class="input-group">
+              <input
+                class="input-group__styles"
+                type="text"
+                id="name"
+                name="name"
+                required
+              />
+              <span class="input-group__placeholder">Name</span>
+            </div>
+            <div class="input-group">
+              <input
+                class="input-group__styles"
+                type="email"
+                id="email"
+                name="email"
+                required
+              />
+              <span class="input-group__placeholder">Email</span>
+            </div>
+            <div class="input-group">
+              <input
+                class="input-group__styles input-phone"
+                type="text"
+                id="phne"
+                name="phone"
+                required
+              />
+              <span class="input-group__placeholder">Phone</span>
+            </div>
+          </div>
+          <div class="contact-form__questions">
+            <div class="input-group"></div>
+            <div class="input-group"></div>
+            <div class="input-group"></div>
+          </div>
+        </div>
+        <button type="submit" class="btn contact-btn">join the team</button>
+      </form>
+    </div>
+    <%- include("partials/footer") %>
+  </body>
+</html>
