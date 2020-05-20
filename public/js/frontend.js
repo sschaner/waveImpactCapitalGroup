@@ -1,7 +1,9 @@
-const howSection = document.querySelector(".how");
-const item = document.querySelectorAll(".how__content");
+const howContent = document.querySelectorAll(".how__content");
 const slideRight = document.querySelectorAll(".slide-right");
 const slideLeft = document.querySelectorAll(".slide-left");
+const contactItems = document.querySelectorAll(".contact__primary--item");
+const joiningBtn = document.querySelector(".joining-btn");
+const contactForm = document.querySelector(".contact-form");
 const appearOptions = {
   threshold: 0,
   rootMargin: "0px 0px -25px 0px",
@@ -36,8 +38,12 @@ function animate(element) {
 
 const observer = new IntersectionObserver(handler, appearOptions);
 
-for (var i = 0; i < item.length; i++) {
-  observer.observe(item[i]);
+for (let i = 0; i < howContent.length; i++) {
+  observer.observe(howContent[i]);
+}
+
+for (let i = 0; i < contactItems.length; i++) {
+  observer.observe(contactItems[i]);
 }
 
 const slideInOnScroll = new IntersectionObserver((entries) => {
@@ -58,4 +64,14 @@ slideRight.forEach((slide) => {
 
 slideLeft.forEach((slide) => {
   slideInOnScroll.observe(slide);
+});
+
+const cleavePhone = new Cleave(".input-phone", {
+  phone: true,
+  phoneRegionCode: "US",
+});
+
+joiningBtn.addEventListener("click", () => {
+  contactForm.style.display = "block";
+  joiningBtn.style.display = "none";
 });
