@@ -72,6 +72,6 @@ const cleavePhone = new Cleave(".input-phone", {
 });
 
 joiningBtn.addEventListener("click", () => {
-  contactForm.classList.toggle("display-block");
+  contactForm.style.display = "block";
   joiningBtn.style.display = "none";
 });
