@@ -329,6 +329,9 @@ CONTACT PAGE
   .container-contact .contact-btn {
     display: inline-block;
     margin: 0 auto; }
+    @media only screen and (min-width: 640px) {
+      .container-contact .contact-btn {
+        margin-top: 1.5em; } }
   .container-contact .joining-btn {
     margin-bottom: 2em; }
   .container-contact .contact-form {
@@ -336,7 +339,50 @@ CONTACT PAGE
     padding: 2.25em;
     border: 1px solid #ddd;
     border-radius: 0.5em;
-    display: none; }
+    display: none;
+    max-width: fit-content;
+    margin: 0 auto; }
+    .container-contact .contact-form .input-group__styles {
+      width: 100%; }
+    .container-contact .contact-form__questions {
+      margin-top: 1.5em; }
+      @media only screen and (min-width: 640px) {
+        .container-contact .contact-form__questions {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          grid-gap: 2em; } }
+      .container-contact .contact-form__questions .yes-no {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        margin: 1.5em 0; }
+        @media only screen and (min-width: 640px) {
+          .container-contact .contact-form__questions .yes-no {
+            margin: 0 auto; } }
+        .container-contact .contact-form__questions .yes-no label {
+          cursor: pointer; }
+          .container-contact .contact-form__questions .yes-no label + label {
+            margin-top: 1.5rem; }
+          .container-contact .contact-form__questions .yes-no label .icon::before {
+            display: inline-block;
+            font-style: normal;
+            font-variant: normal;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            margin-right: 5px; }
+          .container-contact .contact-form__questions .yes-no label input[type="checkbox"] {
+            display: none; }
+            .container-contact .contact-form__questions .yes-no label input[type="checkbox"] + .label-text::before {
+              content: "\f0c8";
+              color: #6d9eeb;
+              font-size: 1.6em; }
+            .container-contact .contact-form__questions .yes-no label input[type="checkbox"]:checked + .label-text::before {
+              content: "\f14a";
+              animation: tick 180ms ease-in; }
+          .container-contact .contact-form__questions .yes-no label .label-text-long {
+            display: flex; }
 
 .btn {
   padding: 10px 30px;
@@ -349,5 +395,26 @@ CONTACT PAGE
   .btn:hover {
     transform: scale(0.98);
     cursor: pointer; }
+
+@-webkit-keyframes tick {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0); }
+  90% {
+    -webkit-transform: scale(1.4);
+    transform: scale(1.4); }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1); } }
+@keyframes tick {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0); }
+  90% {
+    -webkit-transform: scale(1.4);
+    transform: scale(1.4); }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1); } }
 
 /*# sourceMappingURL=style.css.map */
