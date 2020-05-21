@@ -24,8 +24,12 @@
         interested in joining?
       </button>
       <form method="POST" action="send" class="contact-form">
-        <div class="contact-form-questions">
-          <div class="contact-form__personal-info">
+        <img
+          src="img/impact-logo-small.png"
+          alt="Wave Impact Capital Group Logo"
+        />
+        <div class="contact-form__questions">
+          <div class="personal-info">
             <div class="input-group">
               <input
                 class="input-group__styles"
@@ -57,10 +61,21 @@
               <span class="input-group__placeholder">Phone</span>
             </div>
           </div>
-          <div class="contact-form__questions">
-            <div class="input-group"></div>
-            <div class="input-group"></div>
-            <div class="input-group"></div>
+          <div class="yes-no">
+            <label>
+              <input type="checkbox" name="accredited" />
+              <span class="icon label-text">Are you accredited?</span>
+            </label>
+            <label>
+              <input type="checkbox" name="usCitizen" />
+              <span class="icon label-text">Are you a US citizen?</span>
+            </label>
+            <label>
+              <input type="checkbox" name="minimum25K" />
+              <span class="icon label-text label-text-long"
+                >Are you able to invest a minimum of $25,000?</span
+              >
+            </label>
           </div>
         </div>
         <button type="submit" class="btn contact-btn">join the team</button>
