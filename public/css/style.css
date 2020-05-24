@@ -96,43 +96,49 @@ img {
 /*********************************** 
 NAV
 ***********************************/
-.nav {
-  display: flex;
-  justify-content: space-between;
+header {
+  background: rgba(109, 158, 235, 0.7);
+  padding: 0.3em;
   position: fixed;
   bottom: 0;
   z-index: 2;
-  width: 100%;
-  padding: 0.3em;
-  background: rgba(109, 158, 235, 0.7); }
+  width: 100%; }
   @media only screen and (min-width: 768px) {
-    .nav {
+    header {
       top: 0;
-      height: 2.5em; } }
-  .nav__logo-link {
+      height: 3.125em; } }
+  header .nav-container {
     display: flex;
-    width: 30px; }
-  .nav .nav__list {
-    display: flex;
-    align-items: center; }
-    .nav .nav__list .nav__item + .nav__item {
-      margin-left: 0.625em; }
-    .nav .nav__list .nav__link {
-      color: #f8f1c9; }
-      .nav .nav__list .nav__link .nav__content {
-        display: none; }
-        @media only screen and (min-width: 768px) {
-          .nav .nav__list .nav__link .nav__content {
-            display: inline; } }
-      .nav .nav__list .nav__link .nav__icon {
-        font-size: 0.9em; }
-        @media only screen and (min-width: 768px) {
-          .nav .nav__list .nav__link .nav__icon {
-            display: none; } }
-        .nav .nav__list .nav__link .nav__icon .icon-background {
-          color: #f8f1c9; }
-        .nav .nav__list .nav__link .nav__icon .icon-link {
-          color: #233d89; }
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: 0 auto; }
+    header .nav-container .logo {
+      width: 36px; }
+    header .nav-container .nav {
+      display: flex; }
+      header .nav-container .nav .nav__list {
+        display: flex;
+        align-items: center; }
+      header .nav-container .nav .nav__link {
+        color: #f8f1c9; }
+        header .nav-container .nav .nav__link .nav__content {
+          display: none; }
+          @media only screen and (min-width: 768px) {
+            header .nav-container .nav .nav__link .nav__content {
+              display: inline; } }
+          header .nav-container .nav .nav__link .nav__content:hover {
+            color: #233d89; }
+        header .nav-container .nav .nav__link .nav__icon {
+          font-size: 0.9em; }
+          @media only screen and (min-width: 768px) {
+            header .nav-container .nav .nav__link .nav__icon {
+              display: none; } }
+          header .nav-container .nav .nav__link .nav__icon .icon-background {
+            color: #f8f1c9; }
+          header .nav-container .nav .nav__link .nav__icon .icon-link {
+            color: #233d89; }
+      header .nav-container .nav .nav__item + .nav__item {
+        margin-left: 0.625em; }
 
 /*********************************** 
 SHOWCASE SECTION

@@ -125,56 +125,68 @@ img {
 /*********************************** 
 NAV
 ***********************************/
-.nav {
-  display: flex;
-  justify-content: space-between;
+header {
+  background: rgba($secondary-color, 0.7);
+  padding: 0.3em;
   position: fixed;
   bottom: 0;
-  z-index: 2;
-  width: 100%;
-  padding: 0.3em;
-  background: rgba($secondary-color, 0.7);
   @media only screen and (min-width: $tablet) {
     top: 0;
-    height: 2.5em;
+    height: 3.125em;
   }
+  z-index: 2;
+  width: 100%;
 
-  &__logo-link {
+  .nav-container {
     display: flex;
-    width: 30px;
-  }
+    justify-content: space-between;
+    max-width: $max-width;
+    margin: 0 auto;
 
-  .nav__list {
-    display: flex;
-    align-items: center;
-
-    .nav__item + .nav__item {
-      margin-left: 0.625em;
+    .logo {
+      width: 36px;
     }
 
-    .nav__link {
-      color: $tan-color;
+    .nav {
+      display: flex;
 
-      .nav__content {
-        display: none;
-        @media only screen and (min-width: $tablet) {
-          display: inline;
+      .nav__list {
+        display: flex;
+        align-items: center;
+      }
+
+      .nav__link {
+        color: $tan-color;
+
+        .nav__content {
+          display: none;
+          @media only screen and (min-width: $tablet) {
+            display: inline;
+          }
+
+          &:hover {
+            color: $primary-color;
+          }
+        }
+
+        .nav__icon {
+          @media only screen and (min-width: $tablet) {
+            display: none;
+          }
+          font-size: 0.9em;
+
+          .icon-background {
+            color: $tan-color;
+          }
+
+          .icon-link {
+            color: $primary-color;
+          }
         }
       }
 
-      .nav__icon {
-        @media only screen and (min-width: $tablet) {
-          display: none;
-        }
-        font-size: 0.9em;
-
-        .icon-background {
-          color: $tan-color;
-        }
-
-        .icon-link {
-          color: $primary-color;
-        }
+      .nav__item + .nav__item {
+        margin-left: 0.625em;
       }
     }
   }
