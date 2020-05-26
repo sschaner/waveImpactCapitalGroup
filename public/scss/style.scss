@@ -127,12 +127,12 @@ NAV
 ***********************************/
 header {
   background: rgba($secondary-color, 0.7);
-  padding: 0.3em;
+  padding: 0 0.3em;
   position: fixed;
   bottom: 0;
   @media only screen and (min-width: $tablet) {
     top: 0;
-    height: 3.125em;
+    height: 2em;
   }
   z-index: 2;
   width: 100%;
@@ -140,11 +140,16 @@ header {
   .nav-container {
     display: flex;
     justify-content: space-between;
-    max-width: $max-width;
+    align-items: center;
     margin: 0 auto;
+    height: 100%;
 
     .logo {
       width: 36px;
+      @media only screen and (min-width: $tablet) {
+        width: 25px;
+      }
+      padding-top: 0.3em;
     }
 
     .nav {
@@ -478,12 +483,12 @@ CONTACT PAGE
 
   .contact-video {
     display: block;
-    margin: 3em auto 2em;
+    margin: 0 auto;
   }
 
   .contact-btn {
     display: inline-block;
-    margin: 0 auto;
+    margin: 2em auto;
 
     @media only screen and (min-width: $mobile-large) {
       margin-top: 1.5em;
@@ -501,7 +506,14 @@ CONTACT PAGE
     border-radius: 0.5em;
     display: none;
     max-width: fit-content;
-    margin: 0 auto;
+    margin: 2em auto;
+
+    &__logo {
+      width: 40%;
+      @media only screen and (min-width: $mobile-large) {
+        width: 20%;
+      }
+    }
 
     .input-group {
       &__styles {

@@ -2,8 +2,6 @@ const howContent = document.querySelectorAll(".how__content");
 const slideRight = document.querySelectorAll(".slide-right");
 const slideLeft = document.querySelectorAll(".slide-left");
 const contactItems = document.querySelectorAll(".contact__primary--item");
-const joiningBtn = document.querySelector(".joining-btn");
-const contactForm = document.querySelector(".contact-form");
 const appearOptions = {
   threshold: 0,
   rootMargin: "0px 0px -25px 0px",
@@ -64,14 +62,4 @@ slideRight.forEach((slide) => {
 
 slideLeft.forEach((slide) => {
   slideInOnScroll.observe(slide);
-});
-
-const cleavePhone = new Cleave(".input-phone", {
-  phone: true,
-  phoneRegionCode: "US",
-});
-
-joiningBtn.addEventListener("click", () => {
-  contactForm.style.display = "block";
-  joiningBtn.style.display = "none";
 });

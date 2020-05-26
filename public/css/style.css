@@ -98,7 +98,7 @@ NAV
 ***********************************/
 header {
   background: rgba(109, 158, 235, 0.7);
-  padding: 0.3em;
+  padding: 0 0.3em;
   position: fixed;
   bottom: 0;
   z-index: 2;
@@ -106,14 +106,19 @@ header {
   @media only screen and (min-width: 768px) {
     header {
       top: 0;
-      height: 3.125em; } }
+      height: 2em; } }
   header .nav-container {
     display: flex;
     justify-content: space-between;
-    max-width: 1100px;
-    margin: 0 auto; }
+    align-items: center;
+    margin: 0 auto;
+    height: 100%; }
     header .nav-container .logo {
-      width: 36px; }
+      width: 36px;
+      padding-top: 0.3em; }
+      @media only screen and (min-width: 768px) {
+        header .nav-container .logo {
+          width: 25px; } }
     header .nav-container .nav {
       display: flex; }
       header .nav-container .nav .nav__list {
@@ -331,10 +336,10 @@ CONTACT PAGE
   text-align: center; }
   .container-contact .contact-video {
     display: block;
-    margin: 3em auto 2em; }
+    margin: 0 auto; }
   .container-contact .contact-btn {
     display: inline-block;
-    margin: 0 auto; }
+    margin: 2em auto; }
     @media only screen and (min-width: 640px) {
       .container-contact .contact-btn {
         margin-top: 1.5em; } }
@@ -347,7 +352,12 @@ CONTACT PAGE
     border-radius: 0.5em;
     display: none;
     max-width: fit-content;
-    margin: 0 auto; }
+    margin: 2em auto; }
+    .container-contact .contact-form__logo {
+      width: 40%; }
+      @media only screen and (min-width: 640px) {
+        .container-contact .contact-form__logo {
+          width: 20%; } }
     .container-contact .contact-form .input-group__styles {
       width: 100%; }
     .container-contact .contact-form__questions {
