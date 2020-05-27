@@ -382,15 +382,29 @@ VIDEOS SECTION
     }
 
     &:nth-child(even) {
-      .card__video {
-        order: 2;
+      .card {
+        &__video {
+          order: 2;
+        }
+
+        &__content {
+          padding: 1em 2em;
+        }
+      }
+    }
+
+    &:nth-child(odd) {
+      .card {
+        &__content {
+          padding: 1em 2em;
+        }
       }
     }
 
     &__video {
       width: 100%;
       height: 200px;
-      border: 8px solid $primary-color;
+      filter: drop-shadow(0.75em 0.75em 0.5em);
     }
   }
 }
