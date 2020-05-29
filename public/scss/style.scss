@@ -33,6 +33,11 @@ img {
   overflow: hidden;
 }
 
+.background {
+  @include set-background-styles;
+  border: 3px solid $secondary-color;
+}
+
 .section-top {
   margin-top: 4rem;
 }
@@ -62,7 +67,7 @@ img {
 .card {
   display: block;
   grid-gap: 0.5rem;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 
   &__content {
     padding: 1rem;
@@ -500,6 +505,10 @@ CONTACT PAGE
     margin: 0 auto;
   }
 
+  .joining-btn {
+    margin-bottom: 2em;
+  }
+
   .contact-btn {
     display: inline-block;
     margin: 2em auto;
@@ -509,24 +518,13 @@ CONTACT PAGE
     }
   }
 
-  .joining-btn {
-    margin-bottom: 2em;
-  }
-
   .contact-form {
-    background-color: #fff;
-    padding: 2.25em;
+    @include set-background-styles;
     border: 1px solid #ddd;
-    border-radius: 0.5em;
     display: none;
-    max-width: fit-content;
-    margin: 2em auto;
 
     &__logo {
-      width: 40%;
-      @media only screen and (min-width: $mobile-large) {
-        width: 20%;
-      }
+      @include logo-form-sizing;
     }
 
     .input-group {
@@ -541,6 +539,22 @@ CONTACT PAGE
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 2em;
+      }
+
+      .personal-info {
+        &__name {
+          @media only screen and (min-width: $mobile-large) {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 0.5em;
+          }
+
+          :last-child {
+            @media only screen and (min-width: $mobile-large) {
+              margin-top: 0;
+            }
+          }
+        }
       }
 
       .yes-no {
@@ -591,6 +605,29 @@ CONTACT PAGE
         }
       }
     }
+  }
+}
+
+.contact-success {
+  &__logo {
+    display: block;
+    margin: auto;
+    @include logo-form-sizing;
+  }
+
+  .section-title {
+    font-size: 1.2em;
+
+    .success-large {
+      font-size: 2em;
+      display: block;
+    }
+  }
+
+  &__btn {
+    display: block;
+    width: fit-content;
+    margin: 1em auto;
   }
 }
 

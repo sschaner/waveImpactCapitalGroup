@@ -14,15 +14,19 @@ router.get("/contact", (req, res) => {
 });
 
 // Contact Form - Send
-router.post("/send", (req, res) => {
+router.post("/contact", (req, res) => {
+  let contactFirstName = req.body.firstName;
+  let contactLastName = req.body.lastName;
+  let contactEmail = req.body.email;
+  let contactPhone = req.body.phone;
   const output = `
     <body style="color: #233d89; ">
       <h1>Someone wants to join Wave Impact Capital Group</h1>
       <h3>Contact Details:</h3>
       <ul>
-        <li>${req.body.name}</li>
-        <li>${req.body.email}</li>
-        <li>${req.body.phone}</li>
+        <li>${contactFirstName} ${contactLastName}</li>
+        <li>${contactEmail}</li>
+        <li>${contactPhone}</li>
         <li>Accredited: <span style="color: #6d9eeb">${
           req.body.accredited === "yes" ? req.body.accredited : "no"
         }</span></li>
@@ -37,12 +41,12 @@ router.post("/send", (req, res) => {
   `;
 
   let transporter = nodemailer.createTransport({
-    host: "smtp.ethereal.email",
+    host: process.env.TRANSPORTER_HOST,
     port: 587,
     secure: false, // true for 465, false for other ports
     auth: {
-      user: "jordy.prosacco64@ethereal.email", // generated ethereal user
-      pass: "TGj1GEuvz4TUsjgzwk", // generated ethereal password
+      user: process.env.TRANSPORTER_AUTH_USER, // generated ethereal user
+      pass: process.env.TRANSPORTER_AUTH_PASS, // generated ethereal password
     },
     tls: {
       rejectUnautorized: false,
@@ -57,13 +61,15 @@ router.post("/send", (req, res) => {
     html: output, // html body
   };
 
+  let msg = `Thank you ${contactFirstName} for joining our team. You are taking your first step toward financial freedom.`;
+
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
       return console.log(error);
     }
     console.log("Message sent: %s", info.messageId);
     console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
-    res.render("contact", { msg: "Email has been sent." });
+    res.render("contact-success", { msg });
   });
 });
 

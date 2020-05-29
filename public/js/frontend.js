@@ -10,7 +10,19 @@ const slideOptions = {
   threshold: 0,
   rootMargin: "0px 0px -150px 0px",
 };
-const itemDelay = 1.5;
+const itemDelay = 1.2;
+const observer = new IntersectionObserver(handler, appearOptions);
+const slideInOnScroll = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (!entry.isIntersecting) {
+      entry.target.classList.remove("slide-in");
+      return;
+    } else {
+      entry.target.classList.add("slide-in");
+      slideInOnScroll.unobserve(entry.target);
+    }
+  });
+}, slideOptions);
 
 function handler(entries, observer) {
   var itemLoad = 0;
@@ -34,8 +46,6 @@ function animate(element) {
   element.classList.add("loaded");
 }
 
-const observer = new IntersectionObserver(handler, appearOptions);
-
 for (let i = 0; i < howContent.length; i++) {
   observer.observe(howContent[i]);
 }
@@ -43,18 +53,6 @@ for (let i = 0; i < howContent.length; i++) {
 for (let i = 0; i < contactItems.length; i++) {
   observer.observe(contactItems[i]);
 }
-
-const slideInOnScroll = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (!entry.isIntersecting) {
-      entry.target.classList.remove("slide-in");
-      return;
-    } else {
-      entry.target.classList.add("slide-in");
-      slideInOnScroll.unobserve(entry.target);
-    }
-  });
-}, slideOptions);
 
 slideRight.forEach((slide) => {
   slideInOnScroll.observe(slide);
