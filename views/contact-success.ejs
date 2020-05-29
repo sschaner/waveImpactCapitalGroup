@@ -12,21 +12,10 @@
     <title>Wave Impact Capital Group</title>
   </head>
   <body>
-    <div class="container container-contact">
-      <h1 class="section-title">Why Join?</h1>
-      <iframe
-        class="contact-video"
-        src="https://www.youtube.com/embed/R5atnGc8p3s"
-        frameborder="0"
-        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-      ></iframe>
-      <button class="btn contact-btn joining-btn">
-        interested in joining?
-      </button>
-      <form method="POST" action="contact" class="contact-form">
+    <div class="container">
+      <div class="background contact-success">
         <svg
-          class="contact-form__logo"
+          class="contact-success__logo"
           viewBox="0 0 2500 2500"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -50,74 +39,16 @@
             />
           </g>
         </svg>
-
-        <div class="contact-form__questions">
-          <div class="personal-info">
-            <div class="personal-info__name input-group">
-              <div class="input-group">
-                <input
-                  class="input-group__styles"
-                  type="text"
-                  id="firstName"
-                  name="firstName"
-                  required
-                />
-                <span class="input-group__placeholder">First Name</span>
-              </div>
-              <div class="input-group">
-                <input
-                  class="input-group__styles"
-                  type="text"
-                  id="lastName"
-                  name="lastName"
-                  required
-                />
-                <span class="input-group__placeholder">Last Name</span>
-              </div>
-            </div>
-
-            <div class="input-group">
-              <input
-                class="input-group__styles"
-                type="email"
-                id="email"
-                name="email"
-                required
-              />
-              <span class="input-group__placeholder">Email</span>
-            </div>
-            <div class="input-group">
-              <input
-                class="input-group__styles input-phone"
-                type="text"
-                id="phne"
-                name="phone"
-                required
-              />
-              <span class="input-group__placeholder">Phone</span>
-            </div>
-          </div>
-          <div class="yes-no">
-            <label>
-              <input type="checkbox" name="accredited" value="yes" />
-              <span class="icon label-text">Are you accredited?</span>
-            </label>
-            <label>
-              <input type="checkbox" name="usCitizen" value="yes" />
-              <span class="icon label-text">Are you a US citizen?</span>
-            </label>
-            <label>
-              <input type="checkbox" name="minimum25K" value="yes" />
-              <span class="icon label-text label-text-long"
-                >Are you able to invest a minimum of $25,000?</span
-              >
-            </label>
-          </div>
+        <h1 class="section-title">
+          welcome to the
+          <span class="success-large">team</span>
+        </h1>
+        <div class="contact-success__content">
+          <p><%= msg %></p>
+          <a href="/" class="btn contact-success__btn">home</a>
         </div>
-        <button type="submit" class="btn contact-btn">join the team</button>
-      </form>
+      </div>
     </div>
     <%- include("partials/footer") %>
-    <script src="js/contact.js"></script>
   </body>
 </html>

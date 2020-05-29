@@ -27,6 +27,14 @@ img {
   padding: 0 2rem;
   overflow: hidden; }
 
+.background {
+  background-color: #fff;
+  padding: 2.25em;
+  border-radius: 0.5em;
+  max-width: fit-content;
+  margin: 2em auto;
+  border: 3px solid #6d9eeb; }
+
 .section-top {
   margin-top: 4rem; }
 
@@ -52,7 +60,7 @@ img {
 .card {
   display: block;
   grid-gap: 0.5rem;
-  margin-bottom: 2rem; }
+  margin-bottom: 3rem; }
   .card__content {
     padding: 1rem; }
 
@@ -341,22 +349,22 @@ CONTACT PAGE
   .container-contact .contact-video {
     display: block;
     margin: 0 auto; }
+  .container-contact .joining-btn {
+    margin-bottom: 2em; }
   .container-contact .contact-btn {
     display: inline-block;
     margin: 2em auto; }
     @media only screen and (min-width: 640px) {
       .container-contact .contact-btn {
         margin-top: 1.5em; } }
-  .container-contact .joining-btn {
-    margin-bottom: 2em; }
   .container-contact .contact-form {
     background-color: #fff;
     padding: 2.25em;
-    border: 1px solid #ddd;
     border-radius: 0.5em;
-    display: none;
     max-width: fit-content;
-    margin: 2em auto; }
+    margin: 2em auto;
+    border: 1px solid #ddd;
+    display: none; }
     .container-contact .contact-form__logo {
       width: 40%; }
       @media only screen and (min-width: 640px) {
@@ -371,6 +379,14 @@ CONTACT PAGE
           display: grid;
           grid-template-columns: repeat(2, 1fr);
           grid-gap: 2em; } }
+      @media only screen and (min-width: 640px) {
+        .container-contact .contact-form__questions .personal-info__name {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          grid-gap: 0.5em; } }
+      @media only screen and (min-width: 640px) {
+        .container-contact .contact-form__questions .personal-info__name :last-child {
+          margin-top: 0; } }
       .container-contact .contact-form__questions .yes-no {
         display: flex;
         flex-direction: column;
@@ -403,6 +419,23 @@ CONTACT PAGE
               animation: tick 180ms ease-in; }
           .container-contact .contact-form__questions .yes-no label .label-text-long {
             display: flex; }
+
+.contact-success__logo {
+  display: block;
+  margin: auto;
+  width: 40%; }
+  @media only screen and (min-width: 640px) {
+    .contact-success__logo {
+      width: 20%; } }
+.contact-success .section-title {
+  font-size: 1.2em; }
+  .contact-success .section-title .success-large {
+    font-size: 2em;
+    display: block; }
+.contact-success__btn {
+  display: block;
+  width: fit-content;
+  margin: 1em auto; }
 
 .btn {
   padding: 10px 30px;
