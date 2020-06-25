@@ -48,10 +48,6 @@ img {
   max-width: 80%;
   margin: auto;
   padding: 2em 0;
-
-  .new-line {
-    display: block;
-  }
 }
 
 .secondary-title {
@@ -89,7 +85,6 @@ img {
     border: 2px solid $secondary-color;
     border-radius: 4px;
     -webkit-appearance: none;
-    // width: 100%;
     height: 2em;
     color: $secondary-color;
     font-size: 1em;
@@ -228,7 +223,11 @@ SHOWCASE SECTION
     }
 
     &--subtitle {
+      margin-top: 1rem;
       color: $secondary-color;
+      background: rgba(248, 241, 201, 0.7);
+      padding: 3px;
+      border-radius: 25px;
     }
 
     &--btn {
@@ -268,8 +267,78 @@ SHOWCASE SECTION
 }
 
 /*********************************** 
+LANGUAGE SECTION
+***********************************/
+.language {
+  .card {
+    width: 480px;
+
+    &__content {
+      text-align: center;
+      position: relative;
+      padding: 5em;
+      transition: transform 3s;
+      background: pink;
+      transform-style: preserve-3d;
+    }
+
+    &:hover {
+      .card__content {
+        transform: rotateY(0.5turn);
+      }
+    }
+
+    &__front,
+    &__back {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding: 2em;
+      backface-visibility: hidden;
+      transform-style: preserve-3d;
+      display: grid;
+      align-content: center;
+    }
+
+    &__title {
+      font-size: 3rem;
+      transform: translateZ(5rem);
+    }
+
+    &__body {
+      transform: translateZ(2rem);
+    }
+
+    &__back {
+      transform: rotateY(0.5turn);
+      background: lightblue;
+    }
+  }
+}
+
+/*********************************** 
 MORE SECTION
 ***********************************/
+.more {
+  position: relative;
+
+  .freebie {
+    position: absolute;
+    bottom: -50px;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    background: $primary-color;
+
+    a {
+      align-self: center;
+    }
+  }
+}
+
 .more,
 .contact {
   height: 700px;
@@ -311,12 +380,16 @@ MORE SECTION
 }
 
 .row {
+  display: grid;
+  grid-gap: 1rem;
   @media only screen and (min-width: $mobile-large) {
-    display: flex;
-    justify-content: space-around;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 4rem;
+  }
 
-    .col {
-      width: 40%;
+  .col {
+    p {
+      line-height: 1.5;
     }
   }
 }
@@ -421,6 +494,18 @@ VIDEOS SECTION
           margin-left: 1.5rem;
         }
       }
+    }
+  }
+}
+
+/*********************************** 
+ABOUT SECTION
+***********************************/
+.about {
+  .container {
+    div {
+      text-align: center;
+      margin-bottom: 2rem;
     }
   }
 }
