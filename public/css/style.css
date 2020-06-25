@@ -343,6 +343,13 @@ VIDEOS SECTION
   filter: drop-shadow(0.75em 0.75em 0.5em); }
 
 /*********************************** 
+ABOUT SECTION
+***********************************/
+.about .container div {
+  text-align: center;
+  margin-bottom: 2rem; }
+
+/*********************************** 
 TEAM SECTION
 ***********************************/
 @media only screen and (min-width: 640px) {
