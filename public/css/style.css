@@ -46,8 +46,6 @@ img {
   max-width: 80%;
   margin: auto;
   padding: 2em 0; }
-  .section-title .new-line {
-    display: block; }
 
 .secondary-title {
   margin-bottom: 0.25em;
@@ -175,7 +173,11 @@ SHOWCASE SECTION
       .showcase__content--title-large {
         font-size: 4em; }
     .showcase__content--subtitle {
-      color: #6d9eeb; }
+      margin-top: 1rem;
+      color: #6d9eeb;
+      background: rgba(248, 241, 201, 0.7);
+      padding: 3px;
+      border-radius: 25px; }
     .showcase__content--btn {
       display: inline-block;
       margin-top: 2em; }
@@ -204,8 +206,55 @@ SHOWCASE SECTION
     transform: translate(-50%, -50%); }
 
 /*********************************** 
+LANGUAGE SECTION
+***********************************/
+.language .card {
+  width: 480px; }
+  .language .card__content {
+    text-align: center;
+    position: relative;
+    padding: 5em;
+    transition: transform 3s;
+    background: pink;
+    transform-style: preserve-3d; }
+  .language .card:hover .card__content {
+    transform: rotateY(0.5turn); }
+  .language .card__front, .language .card__back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 2em;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    display: grid;
+    align-content: center; }
+  .language .card__title {
+    font-size: 3rem;
+    transform: translateZ(5rem); }
+  .language .card__body {
+    transform: translateZ(2rem); }
+  .language .card__back {
+    transform: rotateY(0.5turn);
+    background: lightblue; }
+
+/*********************************** 
 MORE SECTION
 ***********************************/
+.more {
+  position: relative; }
+  .more .freebie {
+    position: absolute;
+    bottom: -50px;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    background: #233d89; }
+    .more .freebie a {
+      align-self: center; }
+
 .more,
 .contact {
   height: 700px;
@@ -229,12 +278,15 @@ MORE SECTION
     .contact {
       background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url(../img/desktop-large-beach-trail.jpg); } }
 
-@media only screen and (min-width: 640px) {
-  .row {
-    display: flex;
-    justify-content: space-around; }
-    .row .col {
-      width: 40%; } }
+.row {
+  display: grid;
+  grid-gap: 1rem; }
+  @media only screen and (min-width: 640px) {
+    .row {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 4rem; } }
+  .row .col p {
+    line-height: 1.5; }
 
 /*********************************** 
 HOW SECTION
@@ -289,6 +341,13 @@ VIDEOS SECTION
   width: 100%;
   height: 200px;
   filter: drop-shadow(0.75em 0.75em 0.5em); }
+
+/*********************************** 
+ABOUT SECTION
+***********************************/
+.about .container div {
+  text-align: center;
+  margin-bottom: 2rem; }
 
 /*********************************** 
 TEAM SECTION
