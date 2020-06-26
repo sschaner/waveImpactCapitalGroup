@@ -206,44 +206,24 @@ SHOWCASE SECTION
     transform: translate(-50%, -50%); }
 
 /*********************************** 
-LANGUAGE SECTION
-***********************************/
-.language .card {
-  width: 480px; }
-  .language .card__content {
-    text-align: center;
-    position: relative;
-    padding: 5em;
-    transition: transform 3s;
-    background: pink;
-    transform-style: preserve-3d; }
-  .language .card:hover .card__content {
-    transform: rotateY(0.5turn); }
-  .language .card__front, .language .card__back {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    padding: 2em;
-    backface-visibility: hidden;
-    transform-style: preserve-3d;
-    display: grid;
-    align-content: center; }
-  .language .card__title {
-    font-size: 3rem;
-    transform: translateZ(5rem); }
-  .language .card__body {
-    transform: translateZ(2rem); }
-  .language .card__back {
-    transform: rotateY(0.5turn);
-    background: lightblue; }
-
-/*********************************** 
 MORE SECTION
 ***********************************/
 .more {
   position: relative; }
+  .more p + p {
+    margin-top: 1.5rem; }
+  .more p {
+    font-size: 0.85rem;
+    line-height: 1.5; }
+    @media only screen and (min-width: 360px) {
+      .more p {
+        font-size: 0.95rem; } }
+    @media only screen and (min-width: 480px) {
+      .more p {
+        font-size: 1.25rem; } }
+    @media only screen and (min-width: 640px) {
+      .more p {
+        font-size: 1.4rem; } }
   .more .freebie {
     position: absolute;
     bottom: -50px;
@@ -278,15 +258,38 @@ MORE SECTION
     .contact {
       background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url(../img/desktop-large-beach-trail.jpg); } }
 
-.row {
+/*********************************** 
+LANGUAGE SECTION
+***********************************/
+.language .container .secondary-title {
+  margin-top: 2rem; }
+
+.terms-container {
   display: grid;
-  grid-gap: 1rem; }
+  grid-template-columns: repeat(1fr);
+  grid-gap: 2rem;
+  margin-top: 1rem; }
   @media only screen and (min-width: 640px) {
-    .row {
-      grid-template-columns: repeat(2, 1fr);
-      grid-gap: 4rem; } }
-  .row .col p {
-    line-height: 1.5; }
+    .terms-container {
+      grid-template-columns: repeat(2, 1fr); }
+      .terms-container .term-3 {
+        padding-top: 1.55rem; } }
+  @media only screen and (min-width: 786px) {
+    .terms-container .term-4 {
+      padding-top: 1.55rem; } }
+  @media only screen and (min-width: 960px) {
+    .terms-container {
+      grid-template-columns: repeat(3, 1fr); }
+      .terms-container .term-3 {
+        padding-top: 0; }
+      .terms-container .term-4 {
+        padding-top: 0; }
+      .terms-container .term-5 {
+        padding-top: 1.55rem; } }
+  .terms-container .term__title {
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.25rem;
+    border-bottom: 3px solid #6d9eeb; }
 
 /*********************************** 
 HOW SECTION
@@ -341,6 +344,12 @@ VIDEOS SECTION
   width: 100%;
   height: 200px;
   filter: drop-shadow(0.75em 0.75em 0.5em); }
+.videos .card__content--description img {
+  width: 15%;
+  margin: 1rem 0 0 6rem; }
+.videos .card__content--description li {
+  margin-left: 1rem;
+  list-style-type: disc; }
 
 /*********************************** 
 ABOUT SECTION
@@ -352,11 +361,11 @@ ABOUT SECTION
 /*********************************** 
 TEAM SECTION
 ***********************************/
-@media only screen and (min-width: 640px) {
+@media only screen and (min-width: 768px) {
   .team__container {
     display: grid;
     grid-template-columns: repeat(2, 1fr); } }
-@media only screen and (min-width: 640px) {
+@media only screen and (min-width: 768px) {
   .team__container .card {
     display: grid;
     grid-template-columns: 1fr 2fr; } }
@@ -381,6 +390,8 @@ TEAM SECTION
   background-color: #6d9eeb; }
 .team__container .card__content--description {
   margin-top: 1em; }
+  .team__container .card__content--description a {
+    color: #6d9eeb; }
 
 /*********************************** 
 CONTACT SECTION
@@ -397,6 +408,11 @@ CONTACT SECTION
   align-self: center; }
 .contact__secondary {
   text-align: center; }
+  .contact__secondary .secondary-title {
+    background: rgba(248, 241, 201, 0.7);
+    padding: 2px 5px;
+    border-radius: 25px;
+    display: inline-block; }
   .contact__secondary--icons .icon-background {
     color: #6d9eeb; }
 

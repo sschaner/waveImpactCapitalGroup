@@ -267,62 +267,28 @@ SHOWCASE SECTION
 }
 
 /*********************************** 
-LANGUAGE SECTION
-***********************************/
-.language {
-  .card {
-    width: 480px;
-
-    &__content {
-      text-align: center;
-      position: relative;
-      padding: 5em;
-      transition: transform 3s;
-      background: pink;
-      transform-style: preserve-3d;
-    }
-
-    &:hover {
-      .card__content {
-        transform: rotateY(0.5turn);
-      }
-    }
-
-    &__front,
-    &__back {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      padding: 2em;
-      backface-visibility: hidden;
-      transform-style: preserve-3d;
-      display: grid;
-      align-content: center;
-    }
-
-    &__title {
-      font-size: 3rem;
-      transform: translateZ(5rem);
-    }
-
-    &__body {
-      transform: translateZ(2rem);
-    }
-
-    &__back {
-      transform: rotateY(0.5turn);
-      background: lightblue;
-    }
-  }
-}
-
-/*********************************** 
 MORE SECTION
 ***********************************/
 .more {
   position: relative;
+
+  p + p {
+    margin-top: 1.5rem;
+  }
+
+  p {
+    font-size: 0.85rem;
+    @media only screen and (min-width: 360px) {
+      font-size: 0.95rem;
+    }
+    @media only screen and (min-width: $mobile) {
+      font-size: 1.25rem;
+    }
+    @media only screen and (min-width: $mobile-large) {
+      font-size: 1.4rem;
+    }
+    line-height: 1.5;
+  }
 
   .freebie {
     position: absolute;
@@ -379,17 +345,55 @@ MORE SECTION
   background-size: cover;
 }
 
-.row {
+/*********************************** 
+LANGUAGE SECTION
+***********************************/
+.language {
+  .container {
+    .secondary-title {
+      margin-top: 2rem;
+    }
+  }
+}
+
+.terms-container {
   display: grid;
-  grid-gap: 1rem;
+  grid-template-columns: repeat(1fr);
   @media only screen and (min-width: $mobile-large) {
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 4rem;
-  }
 
-  .col {
-    p {
-      line-height: 1.5;
+    .term-3 {
+      padding-top: 1.55rem;
+    }
+  }
+  @media only screen and (min-width: 786px) {
+    .term-4 {
+      padding-top: 1.55rem;
+    }
+  }
+  @media only screen and (min-width: $desktop) {
+    grid-template-columns: repeat(3, 1fr);
+
+    .term-3 {
+      padding-top: 0;
+    }
+
+    .term-4 {
+      padding-top: 0;
+    }
+
+    .term-5 {
+      padding-top: 1.55rem;
+    }
+  }
+  grid-gap: 2rem;
+  margin-top: 1rem;
+
+  .term {
+    &__title {
+      margin-bottom: 0.5rem;
+      padding-bottom: 0.25rem;
+      border-bottom: 3px solid $secondary-color;
     }
   }
 }
@@ -484,6 +488,20 @@ VIDEOS SECTION
       height: 200px;
       filter: drop-shadow(0.75em 0.75em 0.5em);
     }
+
+    &__content {
+      &--description {
+        img {
+          width: 15%;
+          margin: 1rem 0 0 6rem;
+        }
+
+        li {
+          margin-left: 1rem;
+          list-style-type: disc;
+        }
+      }
+    }
   }
 }
 
@@ -503,13 +521,13 @@ ABOUT SECTION
 TEAM SECTION
 ***********************************/
 .team__container {
-  @media only screen and (min-width: $mobile-large) {
+  @media only screen and (min-width: $tablet) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
 
   .card {
-    @media only screen and (min-width: $mobile-large) {
+    @media only screen and (min-width: $tablet) {
       display: grid;
       grid-template-columns: 1fr 2fr;
     }
@@ -544,6 +562,10 @@ TEAM SECTION
 
       &--description {
         margin-top: 1em;
+
+        a {
+          color: $secondary-color;
+        }
       }
     }
   }
@@ -571,6 +593,14 @@ CONTACT SECTION
 
   &__secondary {
     text-align: center;
+
+    .secondary-title {
+      background: rgba(248, 241, 201, 0.7);
+      padding: 2px 5px;
+      border-radius: 25px;
+      display: inline-block;
+    }
+
     &--icons {
       .icon-background {
         color: $secondary-color;
