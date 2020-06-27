@@ -305,40 +305,39 @@ MORE SECTION
   }
 }
 
-.more,
-.contact {
+.more {
   height: 700px;
   padding-bottom: 3rem;
   background: linear-gradient(
-      rgba(256, 256, 256, 0.4),
-      rgba(256, 256, 256, 0.4)
+      rgba(256, 256, 256, 0.3),
+      rgba(256, 256, 256, 0.7)
     ),
     url(../img/mobile-beach-trail.jpg);
   @media only screen and (min-width: $mobile-large) {
     background: linear-gradient(
-        rgba(256, 256, 256, 0.4),
-        rgba(256, 256, 256, 0.4)
+        rgba(256, 256, 256, 0.3),
+        rgba(256, 256, 256, 0.7)
       ),
       url(../img/mobile-large-beach-trail.jpg);
   }
   @media only screen and (min-width: $tablet) {
     background: linear-gradient(
-        rgba(256, 256, 256, 0.4),
-        rgba(256, 256, 256, 0.4)
+        rgba(256, 256, 256, 0.3),
+        rgba(256, 256, 256, 0.7)
       ),
       url(../img/beach-trail.jpg);
   }
   @media only screen and (min-width: $desktop) {
     background: linear-gradient(
-        rgba(256, 256, 256, 0.4),
-        rgba(256, 256, 256, 0.4)
+        rgba(256, 256, 256, 0.3),
+        rgba(256, 256, 256, 0.7)
       ),
       url(../img/deskop-beach-trail.jpg);
   }
   @media only screen and (min-width: $desktop-large) {
     background: linear-gradient(
-        rgba(256, 256, 256, 0.4),
-        rgba(256, 256, 256, 0.4)
+        rgba(256, 256, 256, 0.3),
+        rgba(256, 256, 256, 0.7)
       ),
       url(../img/desktop-large-beach-trail.jpg);
   }
@@ -575,6 +574,43 @@ TEAM SECTION
 CONTACT SECTION
 ***********************************/
 .contact {
+  height: 700px;
+  padding-bottom: 3rem;
+  background: linear-gradient(
+      rgba(256, 256, 256, 0.4),
+      rgba(256, 256, 256, 0.4)
+    ),
+    url(../img/mobile-beach-trail.jpg);
+  @media only screen and (min-width: $mobile-large) {
+    background: linear-gradient(
+        rgba(256, 256, 256, 0.4),
+        rgba(256, 256, 256, 0.4)
+      ),
+      url(../img/mobile-large-beach-trail.jpg);
+  }
+  @media only screen and (min-width: $tablet) {
+    background: linear-gradient(
+        rgba(256, 256, 256, 0.4),
+        rgba(256, 256, 256, 0.4)
+      ),
+      url(../img/beach-trail.jpg);
+  }
+  @media only screen and (min-width: $desktop) {
+    background: linear-gradient(
+        rgba(256, 256, 256, 0.4),
+        rgba(256, 256, 256, 0.4)
+      ),
+      url(../img/deskop-beach-trail.jpg);
+  }
+  @media only screen and (min-width: $desktop-large) {
+    background: linear-gradient(
+        rgba(256, 256, 256, 0.4),
+        rgba(256, 256, 256, 0.4)
+      ),
+      url(../img/desktop-large-beach-trail.jpg);
+  }
+  background-size: cover;
+
   .container {
     max-width: 800px;
     display: flex;
