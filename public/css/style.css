@@ -160,24 +160,22 @@ SHOWCASE SECTION
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   text-transform: uppercase;
   text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
   text-align: center;
   padding: 0 20px;
   color: var(--tan-color); }
   .showcase__content {
+    margin-top: 13vh;
+    color: #f8f1c9;
     z-index: 1; }
     .showcase__content--title {
-      color: #f8f1c9; }
+      font-size: 3em; }
       .showcase__content--title-large {
         font-size: 4em; }
     .showcase__content--subtitle {
       margin-top: 1rem;
-      color: #6d9eeb;
-      background: rgba(248, 241, 201, 0.7);
-      padding: 3px;
-      border-radius: 25px; }
+      color: #233d89; }
     .showcase__content--btn {
       display: inline-block;
       margin-top: 2em; }

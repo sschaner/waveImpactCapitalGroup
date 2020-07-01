@@ -206,16 +206,17 @@ SHOWCASE SECTION
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   @include set-font-style-titles;
   padding: 0 20px;
   color: var(--tan-color);
 
   &__content {
+    margin-top: 13vh;
+    color: $tan-color;
     z-index: 1;
 
     &--title {
-      color: $tan-color;
+      font-size: 3em;
 
       &-large {
         font-size: 4em;
@@ -224,10 +225,7 @@ SHOWCASE SECTION
 
     &--subtitle {
       margin-top: 1rem;
-      color: $secondary-color;
-      background: rgba(248, 241, 201, 0.7);
-      padding: 3px;
-      border-radius: 25px;
+      color: $primary-color;
     }
 
     &--btn {
