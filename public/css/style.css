@@ -166,9 +166,12 @@ SHOWCASE SECTION
   padding: 0 20px;
   color: var(--tan-color); }
   .showcase__content {
-    margin-top: 13vh;
+    margin-top: 7vh;
     color: #f8f1c9;
     z-index: 1; }
+    @media only screen and (min-width: 768px) {
+      .showcase__content {
+        margin-top: 13vh; } }
     .showcase__content--title {
       font-size: 3em; }
       .showcase__content--title-large {
