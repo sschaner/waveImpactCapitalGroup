@@ -229,6 +229,13 @@ SHOWCASE SECTION
     &--subtitle {
       margin-top: 1rem;
       color: $primary-color;
+
+      .mobile-subtitle {
+        display: block;
+        @media only screen and (min-width: $mobile-large) {
+          display: inline;
+        }
+      }
     }
 
     &--btn {
