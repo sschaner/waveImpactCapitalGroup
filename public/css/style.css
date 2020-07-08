@@ -179,6 +179,11 @@ SHOWCASE SECTION
     .showcase__content--subtitle {
       margin-top: 1rem;
       color: #233d89; }
+      .showcase__content--subtitle .mobile-subtitle {
+        display: block; }
+        @media only screen and (min-width: 640px) {
+          .showcase__content--subtitle .mobile-subtitle {
+            display: inline; } }
     .showcase__content--btn {
       display: inline-block;
       margin-top: 2em; }
