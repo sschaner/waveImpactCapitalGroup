@@ -244,14 +244,14 @@ MORE SECTION
 .more {
   height: 700px;
   padding-bottom: 3rem;
-  background: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.7)), url(../img/mobile-beach-trail.webp);
+  background: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.7)), url(../img/mobile-beach-trail.jpg);
   background-size: cover; }
   @media only screen and (min-width: 640px) {
     .more {
-      background: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.7)), url(../img/mobile-large-beach-trail.webp); } }
+      background: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.7)), url(../img/mobile-large-beach-trail.jpg); } }
   @media only screen and (min-width: 768px) {
     .more {
-      background: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.7)), url(../img/beach-trail.webp); } }
+      background: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.7)), url(../img/beach-trail.jpg); } }
   @media only screen and (min-width: 960px) {
     .more {
       background: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.7)), url(../img/deskop-beach-trail.jpg); } }
