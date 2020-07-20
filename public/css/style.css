@@ -393,6 +393,13 @@ TEAM SECTION
   margin-top: 1em; }
   .team__container .card__content--description a {
     color: #6d9eeb; }
+.team__container .more-partners {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  text-align: center;
+  color: #6d9eeb; }
 
 /*********************************** 
 CONTACT SECTION

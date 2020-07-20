@@ -576,6 +576,15 @@ TEAM SECTION
       }
     }
   }
+
+  .more-partners {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    text-align: center;
+    color: $secondary-color;
+  }
 }
 
 /*********************************** 
