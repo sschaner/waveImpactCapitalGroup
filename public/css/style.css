@@ -394,6 +394,7 @@ TEAM SECTION
   .team__container .card__content--description a {
     color: #6d9eeb; }
 .team__container .more-partners {
+  grid-template-columns: 1fr;
   display: flex;
   justify-content: center;
   align-items: center;
