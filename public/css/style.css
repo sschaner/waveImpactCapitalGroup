@@ -343,7 +343,6 @@ VIDEOS SECTION
   padding: 1em 2em; }
 .videos .card__video {
   width: 100%;
-  height: 200px;
   filter: drop-shadow(0.75em 0.75em 0.5em); }
 .videos .card__content--description img {
   width: 25%;
