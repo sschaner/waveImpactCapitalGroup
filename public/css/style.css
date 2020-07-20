@@ -322,11 +322,9 @@ VIDEOS SECTION
   max-width: 800px; }
   .videos__container .slide-right {
     transform: translateX(-50%);
-    opacity: 0;
     transition: all 1s ease-in; }
   .videos__container .slide-left {
     transform: translateX(50%);
-    opacity: 0;
     transition: all 1s ease-in; }
   .videos__container .slide-in {
     transform: translateX(0%);
