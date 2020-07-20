@@ -244,20 +244,20 @@ MORE SECTION
 .more {
   height: 700px;
   padding-bottom: 3rem;
-  background: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.7)), url(../img/mobile-beach-trail.jpg);
+  background: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.7)), url("../img/mobile-beach-trail.webp");
   background-size: cover; }
   @media only screen and (min-width: 640px) {
     .more {
-      background: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.7)), url(../img/mobile-large-beach-trail.jpg); } }
+      background: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.7)), url("../img/mobile-large-beach-trail.webp"); } }
   @media only screen and (min-width: 768px) {
     .more {
-      background: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.7)), url(../img/beach-trail.jpg); } }
+      background: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.7)), url("../img/beach-trail.webp"); } }
   @media only screen and (min-width: 960px) {
     .more {
-      background: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.7)), url(../img/deskop-beach-trail.jpg); } }
+      background: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.7)), url("../img/deskop-beach-trail.jpg"); } }
   @media only screen and (min-width: 1400px) {
     .more {
-      background: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.7)), url(../img/desktop-large-beach-trail.jpg); } }
+      background: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.7)), url("../img/desktop-large-beach-trail.jpg"); } }
 
 /*********************************** 
 LANGUAGE SECTION
@@ -342,7 +342,6 @@ VIDEOS SECTION
 .videos .card:nth-child(odd) .card__content {
   padding: 1em 2em; }
 .videos .card__video {
-  align-self: center;
   width: 100%;
   height: 200px;
   filter: drop-shadow(0.75em 0.75em 0.5em); }
@@ -401,20 +400,20 @@ CONTACT SECTION
 .contact {
   height: 700px;
   padding-bottom: 3rem;
-  background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url(../img/mobile-beach-trail.webp);
+  background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url("../img/mobile-beach-trail.webp");
   background-size: cover; }
   @media only screen and (min-width: 640px) {
     .contact {
-      background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url(../img/mobile-large-beach-trail.webp); } }
+      background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url("../img/mobile-large-beach-trail.webp"); } }
   @media only screen and (min-width: 768px) {
     .contact {
-      background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url(../img/beach-trail.webp); } }
+      background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url("../img/beach-trail.webp"); } }
   @media only screen and (min-width: 960px) {
     .contact {
-      background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url(../img/deskop-beach-trail.jpg); } }
+      background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url("../img/deskop-beach-trail.jpg"); } }
   @media only screen and (min-width: 1400px) {
     .contact {
-      background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url(../img/desktop-large-beach-trail.jpg); } }
+      background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url("../img/desktop-large-beach-trail.jpg"); } }
   .contact .container {
     max-width: 800px;
     display: flex;
@@ -563,5 +562,3 @@ CONTACT PAGE
   100% {
     -webkit-transform: scale(1);
     transform: scale(1); } }
-
-/*# sourceMappingURL=style.css.map */
